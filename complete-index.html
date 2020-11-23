@@ -1,3 +1,5 @@
+<!-- ! COPY INTO HEADER.PHP -->
+
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -17,17 +19,33 @@
         </a>
         <header id="masthead">
             <div class="site-branding">
-                <h1>Site Branding</h1>
+
             </div><!-- .site-branding -->
 
             <nav id="site-navigation" class="main-navigation">
-                <?php
-                wp_nav_menu(
-                    array(
-                        'theme_location' => 'header-menu',
-                        'menu-id' => 'header-menu',
-                    )
-                );
-                ?>
+
             </nav><!-- #site-navigation -->
         </header><!-- #masthead -->
+
+        <!-- ! COPY INTO INDEX.PHP -->
+
+        <?php get_header(); ?>
+
+        <main id="primary" class="site-main">
+    
+        </main><!-- #primary -->
+    
+        <?php get_sidebar(); ?>
+        <?php get_footer(); ?>
+
+        <!-- ! COPY INTO FOOTER.PHP -->
+
+        <footer id="colophon" class="site-footer">
+
+        </footer><!-- #colophon -->
+
+    </div><!-- #page -->
+
+    <?php wp_footer(); ?>
+</body>
+</html>
