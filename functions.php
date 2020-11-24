@@ -16,6 +16,7 @@ function karen_key_infocus_setup() {
         array(
             'header-menu' => __( 'Header Menu', 'karen_key_infocus' ),
             'footer-menu' => __( 'Footer Menu', 'karen_key_infocus' ),
+            'mobile-menu' => __( 'Mobile Menu', 'karen_key_infocus' ),
             'social-menu' => __( 'Social Menu', 'karen_key_infocus' ),
         )
     );
@@ -24,11 +25,15 @@ endif;
 
 add_action( 'after_setup_theme', 'karen_key_infocus_setup' );
 
+// Enqueue Styles & Scripts
+// require get_template_directory() . '/inc/enqueue.php';
+
+
 // Enqueue css styles
-// require get_template_directory() . '/inc/enqueue-styles';
+require get_template_directory() . '/inc/enqueue-styles.php';
 
 // Enqueue JavaScript Files
-// require get_template_directory() . '/inc/enqueue-scripts';
+require get_template_directory() . '/inc/enqueue-scripts.php';
 
 // Enqueue widgets
 require get_template_directory() . '/inc/widgets.php';
