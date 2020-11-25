@@ -15,14 +15,16 @@
         <a class="skip-link screen-reader-text" href="#primary">
             <?php esc_html_e( 'Skip to content', 'karen_key_infocus' ); ?>
         </a>
-        <header id="masthead">
+        <header id="masthead" class="header">
             <div class="site-branding">
-                <h1>Site Branding</h1>
+                <h1 class="header__site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                <h1 class="header__site-description"><?php bloginfo( 'description' ); ?></h1>
             </div><!-- .site-branding -->
 
-            <nav id="site-navigation" class="main-navigation">
 
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -58,13 +60,11 @@
   </div>
 </nav>
 
-                <?php
-                wp_nav_menu(
-                    array(
-                        'theme_location' => 'header-menu',
-                        'menu-id' => 'header-menu',
-                    )
-                );
-                ?>
+
+
+
+
+            <nav id="site-navigation" class="main-navigation">
+
             </nav><!-- #site-navigation -->
         </header><!-- #masthead -->

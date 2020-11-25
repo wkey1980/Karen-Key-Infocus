@@ -2,7 +2,15 @@
 
 function karen_key_infocus_setup_scripts() {
 
-    wp_enqueue_script( 'bootstrap.bundle.js', get_template_directory_uri() . '/bootstrap/js/bootstrap.bundle.js' );
+    // wp_enqueue_script( 'bootstrap.bundle.js', get_template_directory_uri() . '/bootstrap/js/bootstrap.bundle.js' );
+
+    // Enqueue popper.js
+    wp_enqueue_script( 'popper.js', get_template_directory_uri() . '/bootstrap/js/popper.js' );
+
+    // Enqueue bootstrap.justify-content-around
+    wp_enqueue_script( 'bootstrap.js', get_template_directory_uri() . '/bootstrap/js/bootstrap.js', array('jquery') );
+
+
     
     // Enqueue Popper.js // ! Enqueue CDN not working
     // wp_enqueue_script( 'popper.js', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js' );

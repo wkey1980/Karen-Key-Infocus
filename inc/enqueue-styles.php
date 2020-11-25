@@ -7,7 +7,7 @@ function karen_key_infocus_setup_styles() {
     // Enqueue bootstrap CDN // ! Enqueue CDN not working
     // wp_enqueue_style( 'bootstrap', get_template_directory_uri() . 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' );
 
-    wp_enqueue_style( 'bootstrap.css', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css' );
+    wp_enqueue_style( 'bootstrap.css', get_template_directory_uri() . '/bootstrap/css/bootstrap.css' );
 
     // Enqueue theme.css
     wp_enqueue_style( 'theme.css', get_stylesheet_directory_uri() . '/dist/theme.css', false, $theme_version, 'all' );

@@ -25,6 +25,22 @@ endif;
 
 add_action( 'after_setup_theme', 'karen_key_infocus_setup' );
 
+
+
+
+
+// function register_navwalker(){
+	
+// }
+
+// add_action( 'after_setup_theme', 'register_navwalker' );
+
+
+// Register Custom Navigation Walker
+require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
+
+
+
 // Enqueue Styles & Scripts
 // require get_template_directory() . '/inc/enqueue.php';
 
