@@ -17,54 +17,108 @@
         </a>
         <header id="masthead" class="header">
             <div class="site-branding">
-                <h1 class="header__site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-                <h1 class="header__site-description"><?php bloginfo( 'description' ); ?></h1>
+                <nav class="navbar navbar-light bg-light">
+                    <h1 class="header__site-title">
+                        <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+                    </h1> <!-- put into navbar branding -->
+                </nav>
             </div><!-- .site-branding -->
 
-
-
-
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
 
 
 
 
 
             <nav id="site-navigation" class="main-navigation">
+
+            <nav class="navbar navbar-expand-md navbar-light bg-light" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'your-theme-slug' ); ?>">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">Navbar</a>
+        <?php
+        // wp_nav_menu( array(
+        //     'theme_location'    => 'header-menu',
+        //     'depth'             => 2,
+        //     'container'         => 'div',
+        //     'container_class'   => 'collapse navbar-collapse',
+        //     'container_id'      => 'bs-example-navbar-collapse-1',
+        //     'menu_class'        => 'nav navbar-nav',
+        //     'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+        //     'walker'            => new WP_Bootstrap_Navwalker(),
+        // ) );
+        ?>
+    </div>
+</nav>
+
+
+
+
+<!-- TESTING NAV WALKER -->
+<div class="container">
+            <!-- <nav class="navbar navbar-expand-xl p-0">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span> -->
+                </button>
+
+                <?php
+                // wp_nav_menu(array(
+                // 'theme_location'    => 'header-menu',
+                // 'container'       => 'div',
+                // 'container_id'    => 'main-nav',
+                // 'container_class' => 'collapse navbar-collapse justify-content-start',
+                // 'menu_id'         => false,
+                // 'menu_class'      => 'navbar-nav',
+                // 'depth'           => 3,
+                // 'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
+                // 'walker'          => new wp_bootstrap_navwalker()
+                // ));
+                ?>
+
+            <!-- </nav> -->
+</div>
+
+<nav>
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link active" href="#">Active</a>
+    </li>
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+        <ul class="dropdown-menu">
+        <?php
+            wp_nav_menu(
+                array(
+                    'theme_location'    => 'header-menu',
+                    'container'       => 'div',
+                    'container_id'    => '',
+                    'container_class' => '',
+                    'menu_id'         => false,
+                    'menu_class'      => '',
+                    'depth'           => 3,
+                    'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
+                    'walker'          => new wp_bootstrap_navwalker()
+                )
+            );
+        ?>
+        </ul>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    </li>
+</ul>
+</nav>
+
+
+
+
+
 
             </nav><!-- #site-navigation -->
         </header><!-- #masthead -->

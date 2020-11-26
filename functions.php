@@ -26,18 +26,20 @@ endif;
 add_action( 'after_setup_theme', 'karen_key_infocus_setup' );
 
 
+/**
+ * Register Custom Navigation Walker
+ */
+function register_navwalker(){
+	require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
+}
+add_action( 'after_setup_theme', 'register_navwalker' );
 
 
 
-// function register_navwalker(){
-	
-// }
-
-// add_action( 'after_setup_theme', 'register_navwalker' );
 
 
 // Register Custom Navigation Walker
-require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
+// require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
 
 
 
