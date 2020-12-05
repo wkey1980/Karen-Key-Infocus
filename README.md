@@ -1,4 +1,4 @@
-# karen-key-infocus
+# karen_key_infocus
 Karen Key Infocus
 
 This website is being built using bootstrap.

@@ -1,9 +1,11 @@
-        <footer id="colophon" class="site-footer">
+<?php
+/**
+ * @package karen_key_infocus
+ */
+?>
+    <footer class="footer">
 
-        </footer><!-- #colophon -->
-
-    </div><!-- #page -->
-
+    </footer>
     <?php wp_footer(); ?>
 </body>
 </html>
