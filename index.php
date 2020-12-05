@@ -23,6 +23,7 @@
 
 <?php endif; ?>
 
+<?php the_custom_logo(); ?>
 
 </main>
 
